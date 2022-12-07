@@ -1,81 +1,72 @@
 
-let directory = ["person1", "person2", "person3"];
-
-let person1 = {
+let people = [ 
+     {
         firstname: "Nikola",
         lastname: "Perovic",
         age: 31,
         mobile: "064111222333",
-        profession: "Kuvar"
-
-
-}
-
-console.log(person1.firstname, person1.lastname);
-
-
-        for (let property in person1) {
-             console.log(person1[property]);
-        
-              if (property == "age") {      
-              if(person1["age"] < 18) {
-              console.log("maloletan");
-      }       else {
-              console.log("punoletan");
-          }
-        }
-      }
-
-
-
-let person2 = {
+        profession: "Kuvar",
+        imeIPrezime: function ()    {
+                return this.firstname + " " + this.lastname; 
+           }
+   
+    },
+    
+     {
         firstname:"Zorana",
         lastname:"Radisic",
         age: 30,
         mobile:"063222333444",
         profession:"Recepcioner",
-}
-      
-console.log(person2.firstname, person2.lastname);
-
-     
-
-   
-        for (let property in person2) {
-                console.log(person2[property]);
-               
-               if (property == "age") {      
-               if(person1["age"] < 18) {
-               console.log("maloletan");
-       }       else {
-               console.log("punoletan");
+        imeIPrezime1: function ()    {
+                return this.firstname + " " + this.lastname; 
            }
-         }
-       }
 
+     },
 
-
-let person3 = { 
+     { 
         firstname: "Mihailo",
         lastname: "Kosanovic",
         age: 28,
         mobile: "065888777",
-        profession: "Magacioner"
+        profession: "Magacioner",
+        imeIPrezime2: function ()    {
+                return this.firstname + " " + this.lastname; 
+           }
 }
+];
+  
+console.log(people[0].imeIPrezime());
+console.log(people[1].imeIPrezime1());
+console.log(people[2].imeIPrezime2());
 
-console.log(person3.firstname, person3.lastname);
+            for (let property in people[0]) { 
+           
+                if (property == "age") {       
+                if(people[property] < 18) {
+                console.log("Nikola je maloletan");
+               }       else {
+                console.log("Nikola je punoletan");
+              }}};
+              
+              
+              for (let property in people[1]) { 
+           
+                if (property == "age") {       
+                if(people[property] < 18) {
+                console.log("Zorana je maloletna");
+               }       else {
+                console.log("Zorana je punoletna");
+              }}};
 
-        
-
-       for (let property in person3) {
-        console.log(person3[property]);
-       
-       if (property == "age") {      
-       if(person3["age"] < 18) {
-       console.log("maloletan");
-}       else {
-       console.log("punoletan");
-   }
- }
-}
-
+         
+              for (let property in people[2]) { 
+           
+                if (property == "age") {       
+                if(people[property] < 18) {
+                console.log("Mihailo je maloletan");
+               }       else {
+                console.log("Mihailo je punoletan");
+              }}};
+      
+              
